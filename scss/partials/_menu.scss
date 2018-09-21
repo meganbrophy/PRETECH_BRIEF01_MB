@@ -1,0 +1,27 @@
+.navbar {
+  ul.tabs {
+    float:left;
+    margin:0;
+    padding:20px;
+    
+    li {
+      display: inline-block;
+      padding:20px;
+      margin: 0;
+      
+      a {
+        color:black;
+        background: white;
+        padding:5px;
+        text-decoration: none;
+        margin-left:70px;
+       
+        &.active {
+          color:#000;
+          background: #fff;
+        }
+      }
+      
+    }
+  }
+}

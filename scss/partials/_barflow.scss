@@ -1,0 +1,146 @@
+.graph-container {
+	width: 40%;
+	padding:20px;
+	float:left;
+	margin:20px;
+	// display:flex;
+	// align:left;
+}
+.clear-fix {
+	display: table;
+	content: '';
+	clear: both;
+}
+.barflow-container {
+    display: block;
+    box-sizing: border-box;
+    width: 150px;
+    height: 150px;
+    canvas {
+        display: block;
+        position: static;
+    }
+}
+
+.wst_chart {
+    text-align: center;
+    background-color: white;
+    width: 50%;
+    border: 1px solid darkgray;
+
+    margin: 0 auto 2% auto;
+    padding-bottom: 0;
+}
+
+.graph {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+
+    padding: 10% 0 1% 0;
+
+    height: 200px;
+    width: 400px;
+}
+
+.graph .grid {
+    stroke: #cccccc;
+    stroke-dasharray: 0;
+    stroke-width: 1;
+}
+
+.graph .x-grid,
+.graph .y-grid {
+    stroke: black;
+    stroke-width: 2;
+}
+
+.labels {
+    font-size: 13px;
+}
+
+.label-title {
+    font-weight: bold;
+    font-size: 12px;
+    fill: black;
+}
+
+.graph .labels.x-labels {
+    text-anchor: middle;
+}
+
+.graph .labels.y-labels {
+    text-anchor: end;
+}
+
+.graph .labels.y-labels2 {
+    text-anchor: start;
+}
+
+.graph .y-label1,
+.graph .y-label2 {
+    text-anchor: middle;
+}
+
+.x-labels,
+.label-title,
+.y-label1,
+.y-label2,
+.CPI,
+.ARun,
+.G1G2 {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+}
+
+.graph .line {
+    fill: none;
+    stroke-width: 3;
+
+    transition: 0.5s;
+}
+
+.graph .line2 {
+    fill: none;
+    stroke-width: 3;
+    stroke-dasharray: 5;
+}
+
+.graph .lineCPI {
+    stroke: orange;
+}
+
+.graph .labels .CPI {
+    fill: orange;
+}
+
+.graph .lineARun {
+    stroke: blue;
+}
+
+.graph .ARun {
+    fill: blue;
+}
+
+.graph .lineG1G2 {
+    stroke: purple;
+}
+.graph .G1G2 {
+    fill: purple;
+}
+
+.graph .bar {
+    fill: darkred;
+}
+
+.graph .bar:hover,
+.graph .bar:focus {
+    fill: black;
+}
+
+.graph .bar text {
+    visibility: hidden;
+}
+
+.graph .bar:hover text,
+.graph .bar:focus text {
+    visibility: visible;
+    fill: black;
+}

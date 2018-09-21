@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Demo Vue.js</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+</head>
+
+<body>
+
+  <section>
+<div class="app">
+  <h2>{{ message }}</h2>
+  <line-chart></line-chart>
+</div>
+</section>
+
+  
+  <main  class="dark">
+    <div class="sidebar" id="sidebar">
+      <!-- Components for Profile and Contextual Menu -->
+        <div id="profile">
+          <profile></profile>
+        </div>
+        <div id="dashmenu">
+          <dash-menu></dash-menu>
+        </div>
+        
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <!-- components for menus -->
+      <div id="mainmenu">
+        <main-menu></main-menu>
+      </div>
+      
+    </nav>
+    
+    <section class="page" id="page">
+      <!-- components for specific pages -->
+      <div id="recentMessages">
+        <recent-messages></recent-messages>
+      </div>
+      
+      <div id="todo">
+        <todo></todo>
+      </div>
+      
+      <div id="workflow" class="workflow-container graph-container">
+        <canvas class="workflow-chart" id="myChart"></canvas>
+      </div>
+      <div id="sales" class="sales-container graph-container">
+        <canvas id="sales-canvas"></canvas>
+      </div>
+       <div class="sales-container graph-container">
+        <canvas id="sales-by-day"></canvas>
+      </div>
+      <div class="clear-fix"></div>
+
+      <div id="barflow" class="barflow-container">
+        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="graph" aria-labelledby="Sales Figures" role="img">
+
+      </div>
+      
+    </section>
+
+    <section class="page" id="page">
+      <div id="salesman-stats">
+        <salesman-stats 
+          img="img/vanessa.jpg" 
+          name="Tracey Hunter"
+          daily-target="23"
+          daily-sales="10"
+          monthly-target="7242"
+          monthly-sales="2002"
+          monthly-graph="5,7,57,73,76,12,35,42,42"
+          >           
+          </salesman-stats>
+
+        <salesman-stats 
+          img="img/vanessa.jpg" 
+          name="Kim Davis"
+          daily-target="12"
+          daily-sales="8"
+          monthly-target="300"
+          monthly-sales="260"
+          monthly-graph="6,8,20,50,68,7,10,42,42"
+          >           
+          </salesman-stats>
+
+        <salesman-stats 
+          img="img/vanessa.jpg" 
+          name="Jack Hanson"
+          daily-target="400"
+          daily-sales="60"
+          monthly-target="1903"
+          monthly-sales="254"
+          monthly-graph="14,2,53,42,54,12,35,42,42"
+          >           
+          </salesman-stats>
+
+        <salesman-stats 
+          img="img/vanessa.jpg" 
+          name="Kegan Williams"
+          daily-target="250"
+          daily-sales="45"
+          monthly-target="400"
+          monthly-sales="250"
+          monthly-graph="30,5,69,78,12,5,35,42,42"
+          >           
+          </salesman-stats>
+      </div>
+      <!-- components for specific pages -->
+      <div id="recentMessages">
+        <recent-messages></recent-messages>
+      </div>
+      
+      <div id="todo">
+        <todo></todo>
+        
+      </div>
+      
+      <div id="workflow" class="workflow-container">
+        <canvas class="workflow-chart" id="myChart" width="300" height="400"></canvas>
+      </div>
+      <div id="sales" class="sales-container">
+        <canvas id="sales-canvas"></canvas>
+        <canvas id="sales-by-day"></canvas>
+      </div>
+
+    </section>
+  </main>
+
+  
+  
+  <script src="js/vue.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/dashmenu.js"></script>
+  <script src="js/mainmenu.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+  <script src="js/workflow.js"></script>
+  <script src="js/sales-graph.js"></script> 
+  <script src="js/sales-by-day.js"></script> 
+  <script src="js/theme-change.js"></script> 
+  <script src="js/salesman-stats.js"></script>
+  
+
+</body>
+</html>
